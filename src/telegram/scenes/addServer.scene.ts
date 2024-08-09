@@ -92,15 +92,19 @@ export class AddServerScene {
                     BOT_MESSAGES.BTN_TITLE.OK,
                     TELEGRAM_BTN_ACTIONS.OK,
                 ),
+            ],
+            [
                 Markup.button.callback(
                     BOT_MESSAGES.BTN_TITLE.EDIT,
                     TELEGRAM_BTN_ACTIONS.EDIT,
                 ),
+            ],
+            [
                 Markup.button.callback(
                     BOT_MESSAGES.BTN_TITLE.CANCEL,
                     TELEGRAM_BTN_ACTIONS.CANCEL,
                 ),
-            ],
+            ]
         ];
         await ctx.reply(
             `your server details is:\nserver API: <code>${server_api}</code>\nserver Name: <code>${ctx.scene.state.server_name}</code>\n\n`,
@@ -143,6 +147,6 @@ export class AddServerScene {
                 ctx.reply('process was canceled');
             }
         }
-        
+
     }
 }

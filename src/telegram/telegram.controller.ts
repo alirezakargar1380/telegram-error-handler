@@ -28,15 +28,15 @@ export class TelegramController {
 
     ctx.reply(`welcome ${userTelegramName}`)
 
-    await new Promise((resolve) => setTimeout(resolve, 1000 * 3));
+    // await new Promise((resolve) => setTimeout(resolve, 1000 * 3));
 
-    this.bot.telegram.sendMessage(870127846, 'Hello, this is a test message! /add_server')
-      .then(() => {
-        console.log('Message sent successfully');
-      })
-      .catch((error) => {
-        console.error('Error sending message:', error);
-      });
+    // this.bot.telegram.sendMessage(870127846, 'Hello, this is a test message! /add_server')
+    //   .then(() => {
+    //     console.log('Message sent successfully');
+    //   })
+    //   .catch((error) => {
+    //     console.error('Error sending message:', error);
+    //   });
 
     if (!chatID) {
       await ctx.reply(`${BOT_MESSAGES.ERROR.GENERAL}`);
